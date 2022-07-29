@@ -72,7 +72,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signInText.setOnClickListener(this);
         createButton.setOnClickListener(this);
 
-        StorageReference storageRef = FirebaseStorage.getInstance().getReference("images");
+
+
+
+//        String mail=firebaseAuth.getCurrentUser().getEmail();
+//        Toast.makeText(this, mail, Toast.LENGTH_SHORT).show();
+        String key=databaseReference.push().getKey();
+
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference(key);
         activityResultLauncher=registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri result) {
