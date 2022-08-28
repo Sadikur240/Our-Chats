@@ -1,7 +1,6 @@
 # Abouts
 This is an android application of group messaging. People can use it as a family chat application or an application for close friends.
 
-N.B. Don't forget to visit master branch.
 # Features
 - User Login & SignUp
 - Uploading Profile Picture
